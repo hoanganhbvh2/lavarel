@@ -20,7 +20,9 @@ Route::get('/admin', function () {
     return view('admin.index');
 });
 Route::get('/test', function () {
-    return view('admin.test');
+    // return view('admin.test');
+    $data = DB::table('KAL_sinhvien')->get();
+    print_r($data);
 });
 Route::get('/login', function () {
     return view('admin.login');
